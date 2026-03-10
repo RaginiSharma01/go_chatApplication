@@ -1,6 +1,6 @@
 package receiver
 
-func Receive() {
-	// Code to receive messages from the channel
-
+func Receive(ch chan string) {
+	msg := <-ch
+	println("Received message:", msg)
 }
